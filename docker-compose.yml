@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    container_name: agendav
+    build: img/
+    restart: always
+    ports:
+    - "10020:80"
+    environment:
+    - DAV_URL=https://dav.kerjean.me
+    - TIMEZONE=Australia/Sydney
